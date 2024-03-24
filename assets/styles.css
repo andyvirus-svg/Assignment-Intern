@@ -1,0 +1,244 @@
+/* Reset and Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f8f8f8;
+    color: #333;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* Header Styles */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+header nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #ff6f61;
+}
+
+/* Hero Section Styles */
+.hero {
+    background-image: url('../assets/images/hero-background.jpg');
+    background-size: cover;
+    height: 600px;
+    display: flex;
+    align-items: center;
+}
+
+.hero-content {
+    text-align: center;
+    color: #333;
+}
+
+.hero-content h2 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    color: #070707;
+    animation: fadeInUp 1s ease;
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    color: #300303;
+    animation: fadeInUp 1s ease;
+}
+
+.btn {
+    padding: 15px 30px;
+    background-color: #ff6f61;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease;
+    animation: fadeInUp 1s ease;
+}
+
+.btn:hover {
+    background-color: #ff9d76;
+}
+
+/* About Section Styles */
+.about {
+    background-color: #fff;
+    padding: 50px 0;
+}
+
+.about h2 {
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 30px;
+    animation: fadeInLeft 1s ease;
+    color: rgb(25, 25, 103);
+}
+
+.about p {
+    font-size: 1.5rem;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    animation: fadeInRight 1s ease;
+    
+}
+
+/* Course Details Section Styles */
+.course-details {
+    background-color: #f9f9f9;
+    padding: 50px 0;
+}
+
+.course-details h2 {
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 30px;
+    animation: fadeInUp 1s ease;
+    color: rgb(25, 25, 103);
+}
+
+.course-details ul {
+    list-style: none;
+    padding: 0;
+}
+
+.course-details ul li {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    line-height: 1.6;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    animation: fadeInLeft 1s ease;
+    color: rgb(28, 108, 108);
+    font-weight:bold;
+}
+
+.course-details ul li:hover {
+    transform: translateX(5px);
+}
+
+.course-details p {
+    font-size: 1.5rem;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    animation: fadeInRight 1s ease;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer p {
+    font-size: 1rem;
+}
+
+/* Burger Menu Styles */
+.drawer {
+    position: fixed;
+    top: 0;
+    left: -250px; /* Initially off-screen */
+    width: 250px;
+    height: 100%;
+    background-color: #333;
+    transition: left 0.3s ease;
+  }
+  
+  .drawer ul {
+    list-style: none;
+    padding: 20px;
+  }
+  
+  .drawer ul li {
+    margin-bottom: 15px;
+  }
+  
+  .drawer ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+  }
+  
+  .drawer ul li a:hover {
+    color: #ff6f61;
+  }
+
+
+.burger-menu {
+    display: none;
+}
+
+.burger {
+    width: 30px;
+    height: 3px;
+    background-color: #fff;
+    margin: 6px 0;
+    transition: transform 0.3s ease;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+    .drawer {
+        width: 200px; /* Adjust drawer width for smaller screens */
+    }
+
+    .burger-menu {
+        display: block;
+        cursor: pointer;
+    }
+
+    .drawer.active {
+        left: 0;
+    }
+
+    .burger-menu.active .burger:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+
+    .burger-menu.active .burger:nth-child(2) {
+        opacity: 0;
+    }
+
+    .burger-menu.active .burger:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+}
+
